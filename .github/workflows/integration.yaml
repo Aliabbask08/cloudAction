@@ -20,5 +20,5 @@ jobs:
          - run: |
                echo "Cloning the repo"
                ls -lh
-               cp -r index.html /var/www/html
+               sudo cp -r index.html /var/www/html
         
