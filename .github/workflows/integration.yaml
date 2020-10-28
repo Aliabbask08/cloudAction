@@ -1,0 +1,23 @@
+name: nginx webserver
+
+on:
+  push:
+    branches: 
+         - '*'
+jobs:
+   env_setup:
+       runs-on: self-hosted
+       steps:
+          - name: Install nginx webserver
+            run: |
+                 sudo apt-get update -y
+                 sudo apt-get install nginx -y
+   build:
+       runs-on: self-hosted 
+       steps:
+         - uses: actions/checkout@v2
+         - run: |
+               echo "Cloning the repo"
+               ls -lh
+               cp -r index.html /var/www/html
+        
