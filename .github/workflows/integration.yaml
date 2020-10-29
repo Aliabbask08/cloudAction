@@ -19,5 +19,5 @@ jobs:
          - run: |
                echo "Cloning the repo"
                ls -lh
-               sudo cp -r index.html /var/www/html
-        
+               sudo cp -r index.html /usr/share/nginx/html/
+               sudo systemctl restart nginx
