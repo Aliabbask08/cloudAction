@@ -10,8 +10,7 @@ jobs:
        steps:
           - name: Install nginx webserver
             run: |
-                 sudo apt-get update -y
-                 sudo apt-get install nginx -y
+                 sudo amazon-linux-extras install nginx1 -y
    build:
        runs-on: self-hosted 
        needs: env_setup
