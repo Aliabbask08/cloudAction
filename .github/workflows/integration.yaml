@@ -3,7 +3,7 @@ name: nginx webserver
 on:
   push:
     branches: 
-         - '*'
+         - 'master'
 jobs:
    env_setup:
        runs-on: self-hosted
